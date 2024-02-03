@@ -321,10 +321,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LandingPad
       objectReference: {fileID: 0}
-    - target: {fileID: 7377157170712801588, guid: 2c05a4a56df5849cda29e97f4c0989f4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e0b6dd7e295e04a91a256066d123f4c9, type: 2}
     - target: {fileID: 7696672500272805209, guid: 2c05a4a56df5849cda29e97f4c0989f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.4
@@ -378,14 +374,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4268056031210367567, guid: 012b68c90615a4f1888e4548b0139cde, type: 3}
-      propertyPath: m_Drag
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4268056031210367567, guid: 012b68c90615a4f1888e4548b0139cde, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     - target: {fileID: 4316456100927555382, guid: 012b68c90615a4f1888e4548b0139cde, type: 3}
       propertyPath: m_Name
       value: Rocket
