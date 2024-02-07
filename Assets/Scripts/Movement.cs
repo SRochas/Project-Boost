@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField]
     float mainThrust = 1000f;
-
+    
     [SerializeField]
     float rotationThrust = 100f;
 
@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
 
     Rigidbody rigidBody;
     AudioSource audioSource;
-
+    
     // Start is called before the first frame update
     void Start()
     {
