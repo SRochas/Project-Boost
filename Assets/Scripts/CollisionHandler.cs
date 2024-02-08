@@ -20,11 +20,14 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
 
+    Rigidbody rocket;
+
     bool isTransitioning = false;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        rocket = GetComponent<Rigidbody>();
     }
 
     void OnCollisionEnter(Collision other)
@@ -55,6 +58,7 @@ public class CollisionHandler : MonoBehaviour
         audioSource.PlayOneShot(success);
         successParticles.Play();
         GetComponent<Movement>().enabled = false;
+        rocket.isKinematic = true;
         Invoke("LoadNextLevel", winOrCrashDelay);
     }
 
@@ -74,6 +78,7 @@ public class CollisionHandler : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
         isTransitioning = false;
+        rocket.isKinematic = false;
     }
 
     void LoadNextLevel()
