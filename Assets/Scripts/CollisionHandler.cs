@@ -24,10 +24,31 @@ public class CollisionHandler : MonoBehaviour
 
     bool isTransitioning = false;
 
+    // Cheat Codes
+    bool shouldDetectCollisions = true;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         rocket = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        ListenForCheatCodes();
+    }
+
+    void ListenForCheatCodes()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            shouldDetectCollisions = !shouldDetectCollisions;
+            rocket.detectCollisions = shouldDetectCollisions;
+        }
     }
 
     void OnCollisionEnter(Collision other)
